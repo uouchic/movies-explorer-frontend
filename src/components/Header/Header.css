@@ -1,0 +1,140 @@
+.header {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  /* background-color: #073042; */
+  display: flex;
+  align-items: center;
+}
+
+.header__column {
+  margin-left: 70px;
+  flex: 1;
+  display: flex;
+}
+
+.header__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.header__link {
+  display: block;
+  line-height: 0;
+}
+
+.header__reg {
+  color: #fff;
+  text-align: right;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 138.462% */
+
+  text-decoration: none;
+
+  margin-right: 30px;
+}
+
+.header__log {
+  margin-right: 70px;
+  width: 76px;
+  height: 32px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+  border: none;
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.header__prof {
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  text-decoration: none;
+  margin-right: 7px;
+}
+
+.header__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #313131;
+  background-image: url(../../images/icon__COLOR_icon-main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__burger {
+  width: 44px;
+  height: 44px;
+  display: none;
+
+  background-image: url(../../images/icon__COLOR_icon-burger.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    max-width: 768px;
+  }
+
+  .header__column {
+    margin-left: 30px;
+  }
+
+  .header__log {
+    margin-right: 30px;
+  }
+  .header__burger {
+    background-color: inherit;
+    border: 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  .header__avatar {
+    display: none;
+  }
+
+  .header__prof {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    max-width: 320px;
+  }
+
+  .header__column {
+    margin-left: 14px;
+  }
+
+  .header__reg {
+    font-size: 10px;
+    line-height: 16px;
+
+    margin-right: 14px;
+  }
+
+  .header__log {
+    margin-right: 14px;
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+}

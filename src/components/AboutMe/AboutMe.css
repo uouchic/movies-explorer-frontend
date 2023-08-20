@@ -1,0 +1,141 @@
+.about-me {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 110px 70px 100px;
+  box-sizing: border-box;
+}
+
+.two-columns_location_me {
+  margin-top: 66px;
+}
+
+.two-columns__me-text {
+  max-width: 598px;
+}
+
+.two-columns__me-title {
+  margin: 0;
+  margin-top: 18px;
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 111.111% */
+}
+
+.two-columns__me-paragraph {
+  margin: 0;
+  margin-top: 26px;
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+
+.two-columns__me-link {
+  display: block;
+  margin-top: 99px;
+  text-decoration: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.two-columns__me-portrait {
+  width: 270px;
+  height: 327px;
+}
+
+@media screen and (max-width: 1279px) {
+  .about-me {
+    max-width: 768px;
+    padding: 90px 50px 87px;
+  }
+
+  .two-columns_location_me {
+    margin-top: 61px;
+  }
+
+  .two-columns__me-text {
+    max-width: 364px;
+  }
+
+  .section-subtitle_location_me {
+    font-size: 40px;
+    line-height: 58px;
+    letter-spacing: -2px;
+  }
+
+  .two-columns__me-title {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .two-columns__me-paragraph {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .two-columns__me-link {
+    margin-top: 87px;
+  }
+
+  .two-columns__me-portrait {
+    padding-top: 8px;
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me {
+    max-width: 320px;
+    padding: 71px 14px 68px;
+  }
+
+  .two-columns_location_me {
+    margin-top: 60px;
+  }
+
+  .two-columns_location_me {
+    flex-direction: column-reverse;
+    margin-top: 52px;
+  }
+
+  .section-subtitle_location_me {
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .two-columns__me-title {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .two-columns__me-paragraph {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .two-columns__me-link {
+    margin-top: 40px;
+  }
+
+  .two-columns__me-portrait {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+}

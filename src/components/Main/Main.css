@@ -1,0 +1,13 @@
+.content {
+  flex: 1;
+}
+
+@media screen and (max-width: 1279px) {
+  .content {
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+  }
+}

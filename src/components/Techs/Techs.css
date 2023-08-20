@@ -1,0 +1,157 @@
+.techs {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 100px 70px;
+  background-color: #272727;
+  box-sizing: border-box;
+}
+
+.section-subtitle {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+
+.section-subtitle_location_techs {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.paragraph {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.56px;
+}
+
+.paragraph_techs {
+  max-width: 460px;
+  margin: 26px auto 0;
+}
+
+.nav {
+  max-width: 690px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__techs {
+  margin-top: 100px;
+}
+
+.nav__list {
+  width: 90px;
+  height: 60px;
+  background-color: #303030;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+
+@media screen and (max-width: 1279px) {
+  .techs {
+    max-width: 768px;
+    padding: 90px 50px;
+  }
+
+  .section-subtitle_location_techs {
+    margin-top: 80px;
+  }
+
+  .paragraph {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.48px;
+  }
+
+  .paragraph_techs {
+    margin-top: 22px;
+  }
+
+  .nav {
+    max-width: 648px;
+  }
+
+  .nav__techs {
+    margin-top: 83px;
+  }
+
+  .nav__list {
+    width: 84px;
+    height: 57px;
+  }
+
+  .nav__link {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs {
+    max-width: 320px;
+    padding: 70px 18px;
+    background-color: #202020;
+  }
+
+  .section-subtitle {
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .section-subtitle_location_techs {
+    margin-top: 60px;
+  }
+
+  .paragraph {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+  }
+
+  .paragraph__techs {
+    max-width: 292px;
+    margin-top: 24px;
+  }
+
+  .nav {
+    max-width: 178px;
+    gap: 10px;
+  }
+
+  .nav__techs {
+    margin-top: 50px;
+  }
+}

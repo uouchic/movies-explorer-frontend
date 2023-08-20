@@ -1,0 +1,154 @@
+.register {
+  flex: 1;
+  display: flex;
+}
+
+.user-data {
+  margin: 0 auto;
+  width: 396px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+
+
+.user-data__title {
+  margin: 0;
+  margin-top: 40px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.user-data__form {
+  margin-top: 40px;
+}
+
+.user-data__heading {
+  margin: 0;
+  color: #8b8b8b;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user-data__item {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border: 0;
+  width: 100%;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #424242;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user-data__err-message {
+  display: block;
+  margin: 0;
+  height: 12px;
+  margin-bottom: 6px;
+  color: #ee3465;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user-data__save {
+  width: 100%;
+  min-height: 45px;
+  border: 0;
+  margin-top: 127px;
+  border-radius: 3px;
+  background: #4285f4;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.user-data__save:hover {
+  opacity: 0.8;
+}
+
+.user-data__link {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Inter';
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.user-data__link:hover {
+  opacity: 0.7;
+}
+
+.user-data__in-color {
+  color: #4285f4;
+}
+
+@media screen and (max-width: 767px) {
+  .user-data {
+    width: 260px;
+    margin-top: 40px;
+  }
+
+  .user-data__form {
+    margin-top: 10px;
+  }
+
+  .user-data__save {
+    min-height: 46px;
+    margin-top: 173px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .user-data__link {
+    font-size: 12px;
+  }
+
+
+  .header__logo_location_register {
+    margin: 0 auto;
+    
+  }
+
+  .user-data__title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 68px;
+  }
+
+  .user-data__save {
+    margin-top: 215px;
+    font-size: 12px;
+  }
+}

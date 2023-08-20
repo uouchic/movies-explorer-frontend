@@ -5,3 +5,5 @@
 
 Адрес репозитория: https://github.com/uouchic/movies-explorer-frontend
 
+Макет:  dark-1
+

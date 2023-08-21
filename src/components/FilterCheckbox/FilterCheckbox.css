@@ -9,21 +9,11 @@
 
 .checkbox__wrap {
   position: relative;
-  display: block;
   cursor: pointer;
 }
 
-.checkbox__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-.checkbox__marker {
+.checkbox__switch {
   box-sizing: border-box;
-  display: block;
   position: relative;
   border-radius: 25px;
   background: #343434;
@@ -33,7 +23,7 @@
   margin-right: 14px;
 }
 
-.checkbox__marker:before {
+.checkbox__marker {
   content: '';
   position: absolute;
   transition: all 0.5s ease;
@@ -46,7 +36,7 @@
   border-radius: 50%;
 }
 
-.checkbox__input:checked ~ .checkbox__marker:before {
+.checkbox__marker_position_includ {
   left: 18px;
   background: #2be080;
 }
@@ -71,7 +61,6 @@
 @media screen and (max-width: 767px) {
   .checkbox__item {
     padding-top: 46px;
-
     background: inherit;
     border-radius: 0;
   }

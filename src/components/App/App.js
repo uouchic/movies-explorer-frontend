@@ -21,46 +21,53 @@ import NavMenu from "../NavMenu/NavMenu";
 
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
 
-  const [navActive, setNavActive] = useState(false);
+  const [navleaving, setNavleaving] = useState(false);
 
-  function openNav() {
-    setNavActive(true);
+  
+
+  function handleOpenNavleaving() {
+    setNavleaving(true);
   }
 
-  function closeNav() {
-    setNavActive(false);
+  function handleCloseNavleaving() {
+    setNavleaving(false);
   }
+
+
+  const [checkboxSwitch, setCheckboxSwitch] = useState(false);
+
+  function handleСhangeCheckbox() {
+    setCheckboxSwitch(!checkboxSwitch);
+  }
+  
 
   return (
 
     <div className="page">
 
 
-
       <Routes>
 
+        <Route path="/" element={<Main loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} />} />
 
-        <Route path="/" element={<Main loggedIn={loggedIn} openNav={openNav} />} />
+        <Route path="/movies" element={<Movies loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} checkboxSwitch={checkboxSwitch} handleСhangeCheckbox={handleСhangeCheckbox}/>} />
 
-        <Route path="/movies" element={<Movies />} />
-
-        <Route path="/saved-movies" element={<SavedMovies />} />
+        <Route path="/saved-movies" element={<SavedMovies loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} checkboxSwitch={checkboxSwitch} handleСhangeCheckbox={handleСhangeCheckbox} />} />
 
         <Route path="/signup" element={<Register />} />
 
         <Route path="/signin" element={<Login />} />
 
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} />} />
 
         <Route path="*" element={<NotFound />} />
 
-
       </Routes>
 
-      <NavMenu navActive={navActive} closeNav={closeNav} />
+      <NavMenu navleaving={navleaving} handleCloseNavleaving={handleCloseNavleaving} />
 
     </div>
 

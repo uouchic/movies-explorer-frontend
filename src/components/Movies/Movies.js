@@ -9,22 +9,24 @@ import SearchForm from "../SearchForm/SearchForm";
 
 import Footer from "../Footer/Footer";
 
-function Movies() {
+function Movies(props) {
     return (
 
         <>
 
-        <Header />
+            <Header
+            loggedIn={props.loggedIn}
+            handleOpenNavleaving={props.handleOpenNavleaving}/>
 
-        <main className="movies">
+            <main className="movies">
 
-            <SearchForm />
-            <MoviesCardList />
-            <button className="movies-list__btn" type="button">Ещё</button>
+                <SearchForm checkboxSwitch={props.checkboxSwitch} handleСhangeCheckbox={props.handleСhangeCheckbox} />
+                <MoviesCardList />
+                <button className="movies-list__btn" type="button">Ещё</button>
 
-        </main>
+            </main>
 
-        <Footer />
+            <Footer />
 
         </>
 

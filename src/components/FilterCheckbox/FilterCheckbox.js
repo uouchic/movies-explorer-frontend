@@ -1,20 +1,22 @@
 import './FilterCheckbox.css';
 
 
-function FilterCheckbox() {
+function FilterCheckbox(props) {
     return (
 
 
         <div className="checkbox__item">
 
-            <label className="checkbox__wrap">
-                <input className="checkbox__input" type="checkbox" name="checkbox" />
-                <span className="checkbox__marker"></span>
-            </label>
+            <div className="checkbox__wrap">
+
+                <div className="checkbox__switch" onClick={props.handleСhangeCheckbox}>
+                    <div className={props.checkboxSwitch ? "checkbox__marker checkbox__marker_position_includ" : "checkbox__marker"}>
+
+                    </div>
+                </div>
+            </div>
 
             <p className="checkbox__name">Короткометражки</p>
-
-
 
         </div>
 

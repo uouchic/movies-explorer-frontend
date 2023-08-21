@@ -27,7 +27,7 @@ function Header(props) {
           <button
             type="button"
             className="header__burger"
-            onClick={props.openNav}
+            onClick={props.handleOpenNavleaving}
 
           ></button>
         </>

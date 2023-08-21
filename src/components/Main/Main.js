@@ -18,7 +18,7 @@ function Main(props) {
 
             <Header
                 loggedIn={props.loggedIn}
-                openNav={props.openNav}
+                handleOpenNavleaving={props.handleOpenNavleaving}
             />
 
             <main className="content">

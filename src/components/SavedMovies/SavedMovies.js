@@ -11,16 +11,18 @@ import SearchForm from "../SearchForm/SearchForm";
 
 import Footer from "../Footer/Footer";
 
-function SavedMovies() {
+function SavedMovies(props) {
     return (
 
         <>
 
-        <Header />
+        <Header
+        loggedIn={props.loggedIn}
+        handleOpenNavleaving={props.handleOpenNavleaving} />
 
         <main className="save-movies">
 
-            <SearchForm />
+            <SearchForm checkboxSwitch={props.checkboxSwitch} handleСhangeCheckbox={props.handleСhangeCheckbox}/>
             <MoviesCardList />
 
         </main>

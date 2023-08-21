@@ -2,15 +2,14 @@ import './Profile.css';
 
 import Header from "../Header/Header";
 
-
-
-
-function Profile() {
+function Profile(props) {
     return (
 
 
         <>
-            <Header />
+            <Header 
+            loggedIn={props.loggedIn}
+            handleOpenNavleaving={props.handleOpenNavleaving}/>
 
 
             <main className="profile">
@@ -41,12 +40,10 @@ function Profile() {
                         />
                     </div>
 
-
                     <div className="profile-actions">
 
                     <button type="button" className="profile-actions__edit">Редактировать</button>
                     <button type="button" className="profile-actions__edit profile-actions__edit_text_color">Выйти из аккаунта</button>
-
 
                     </div>              
 

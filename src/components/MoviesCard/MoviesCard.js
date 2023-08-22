@@ -11,7 +11,7 @@ function MoviesCard(props) {
         
         <article className="movies-card">
 
-            <img className="movies-card__image" src={props.link} alt="" />
+            <img className="movies-card__image" src={props.link} alt={props.name} />
 
             <div className="movies-card__group">
                 <h4 className="movies-card__title">{props.name}</h4>

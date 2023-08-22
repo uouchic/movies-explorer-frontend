@@ -8,9 +8,9 @@ function Register() {
         <main className="register">
             <section className="user-data">
 
-            <Link to="/" className="header__link"> <img className="header__logo" src={headerLogo} alt="Логотип" /></Link>
+            <Link to="/" className="header-link"> <img className="header-link__logo" src={headerLogo} alt="Логотип" /></Link>
             
-                <h3 className="user-data__title">Добро пожаловать</h3>
+                <h3 className="user-data__title">Добро пожаловать!</h3>
                 <form className="user-data__form">
 
                     <h4 className="user-data__heading">Имя</h4>
@@ -22,6 +22,8 @@ function Register() {
                         className="user-data__item"
                         minLength="2"
                         maxLength="40"
+                        placeholder="Введите имя"
+                        autoComplete="off"
                         required
                     ></input>
 
@@ -34,6 +36,8 @@ function Register() {
                         name="email"
                         type="email"
                         className="user-data__item"
+                        placeholder="Введите E-mail"
+                        autoComplete="off"
                         required
                     ></input>
 
@@ -46,6 +50,7 @@ function Register() {
                         name="password"
                         type="password"
                         className="user-data__item"
+                        placeholder="Введите пароль"
                         required
                     ></input>
 

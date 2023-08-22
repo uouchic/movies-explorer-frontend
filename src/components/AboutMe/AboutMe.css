@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+.two-columns__subtitle {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+
 .two-columns_location_me {
   margin-top: 66px;
 }
@@ -49,12 +60,30 @@
   line-height: normal;
 }
 
+.two-columns__me-link:hover {
+  opacity: 0.7;
+}
+
 .two-columns__me-portrait {
   width: 270px;
   height: 327px;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1152px) {
+  .about-me {
+    max-width: 990px;
+  }
+
+  .two-columns__me-paragraph {
+    margin-right: 20px;
+  }
+
+  .two-columns__me-title {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .about-me {
     max-width: 768px;
     padding: 90px 50px 87px;
@@ -68,7 +97,7 @@
     max-width: 364px;
   }
 
-  .section-subtitle_location_me {
+  .two-columns__subtitle {
     font-size: 40px;
     line-height: 58px;
     letter-spacing: -2px;
@@ -84,10 +113,11 @@
     margin-top: 20px;
     font-size: 12px;
     line-height: 18px;
+    margin-right: 0;
   }
 
   .two-columns__me-link {
-    margin-top: 87px;
+    margin-top: 84px;
   }
 
   .two-columns__me-portrait {
@@ -97,7 +127,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .about-me {
     max-width: 320px;
     padding: 71px 14px 68px;
@@ -112,7 +142,7 @@
     margin-top: 52px;
   }
 
-  .section-subtitle_location_me {
+  .two-columns__subtitle {
     font-size: 30px;
     line-height: normal;
     letter-spacing: -1.2px;
@@ -127,6 +157,7 @@
   .two-columns__me-paragraph {
     font-size: 11px;
     line-height: 16px;
+    margin-right: 0;
   }
 
   .two-columns__me-link {

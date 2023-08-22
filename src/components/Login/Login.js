@@ -8,9 +8,9 @@ function Login() {
         <main className="register">
             <section className="user-data">
 
-                <Link to="/" className="header__link"> <img className="header__logo" src={headerLogo} alt="Логотип" /></Link>
+            <Link to="/" className="header-link"> <img className="header-link__logo" src={headerLogo} alt="Логотип" /></Link>
 
-                <h3 className="user-data__title">Рады видеть</h3>
+                <h3 className="user-data__title">Рады видеть!</h3>
                 <form className="user-data__form">
 
                                      
@@ -22,6 +22,8 @@ function Login() {
                         name="email"
                         type="email"
                         className="user-data__item"
+                        placeholder="Введите E-mail"
+                        autoComplete="off"
                         required
                     ></input>
 
@@ -34,6 +36,7 @@ function Login() {
                         name="password"
                         type="password"
                         className="user-data__item"
+                        placeholder="Введите пароль"
                         required
                     ></input>
 

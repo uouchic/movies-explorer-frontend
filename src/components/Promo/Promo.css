@@ -32,7 +32,14 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1152px) {
+  .promo {
+    max-width: 990px;
+  } 
+ 
+}
+
+@media screen and (max-width: 960px) {
   .promo {
     max-width: 768px;
     padding-top: 300px;
@@ -55,7 +62,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .promo {
     max-width: 320px;
     padding-top: 183px;

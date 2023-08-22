@@ -1,4 +1,4 @@
-.checkbox__item {
+.checkbox {
   padding: 26px 30px 26px 29px;
   display: flex;
   background: #2f2f2f;
@@ -51,15 +51,15 @@
   line-height: 18px;
 }
 
-@media screen and (max-width: 1279px) {
-  .checkbox__item {
+@media screen and (max-width: 960px) {
+  .checkbox {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .checkbox__item {
+@media screen and (max-width: 540px) {
+  .checkbox {
     padding-top: 46px;
     background: inherit;
     border-radius: 0;

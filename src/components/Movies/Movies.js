@@ -15,14 +15,14 @@ function Movies(props) {
         <>
 
             <Header
-            loggedIn={props.loggedIn}
-            handleOpenNavleaving={props.handleOpenNavleaving}/>
+                loggedIn={props.loggedIn}
+                handleOpenNavleaving={props.handleOpenNavleaving} />
 
             <main className="movies">
 
                 <SearchForm checkboxSwitch={props.checkboxSwitch} handleСhangeCheckbox={props.handleСhangeCheckbox} />
                 <MoviesCardList />
-                <button className="movies-list__btn" type="button">Ещё</button>
+                <button className="movies__btn" type="button">Ещё</button>
 
             </main>
 

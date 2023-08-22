@@ -100,7 +100,18 @@
   line-height: 17px;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1152px) {
+  .about-project {
+    max-width: 990px;
+  } 
+
+  .two-columns__main-text:first-child {
+  padding-right: 20px;
+}
+ 
+}
+
+@media screen and (max-width: 960px) {
   .about-project {
     max-width: 768px;
     padding: 88px 50px 90px 50px;
@@ -128,7 +139,9 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+
+
+@media screen and (max-width: 540px) {
   .about-project {
     max-width: 320px;
     padding: 68px 18px 70px 18px;

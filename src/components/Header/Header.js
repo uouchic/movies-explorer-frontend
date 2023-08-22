@@ -10,20 +10,24 @@ function Header(props) {
   return (
 
 
-    <header className="header">
+    <header className={props.bacgroundHeader ? "header header_location_main" : "header "}>
 
       {props.loggedIn ? (
         <>
-          <div className="header__column">
+          <div className="header-column">
 
-            <Link to="/" className="header__link"> <img className="header__logo" src={headerLogo} alt="Логотип" /></Link>
+            <Link to="/" className="header-link"> <img className="header-link__logo" src={headerLogo} alt="Логотип" /></Link>
 
             <Navigation />
 
           </div>
 
-          <Link to="/profile" className="header__prof">Аккаунд</Link>
-          <div className="header__avatar"></div>
+          <Link to="/profile" className="header__wrap">
+
+          <div to="/profile" className="header__prof">Аккаунт</div>
+          <div className={props.bacgroundHeader ? "header__avatar header__avatar_location_main" : "header__avatar"}></div>
+          </Link>
+
           <button
             type="button"
             className="header__burger"
@@ -34,9 +38,9 @@ function Header(props) {
 
       ) : (
         <>
-          <div className="header__column">
+          <div className="header-column">
 
-            <Link to="/" className="header__link"> <img className="header__logo" src={headerLogo} alt="Логотип" /></Link>
+            <Link to="/" className="header-link"> <img className="header-link__logo" src={headerLogo} alt="Логотип" /></Link>
 
           </div>
 

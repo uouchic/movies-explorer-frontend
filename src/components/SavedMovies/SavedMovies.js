@@ -16,18 +16,18 @@ function SavedMovies(props) {
 
         <>
 
-        <Header
-        loggedIn={props.loggedIn}
-        handleOpenNavleaving={props.handleOpenNavleaving} />
+            <Header
+                loggedIn={props.loggedIn}
+                handleOpenNavleaving={props.handleOpenNavleaving} />
 
-        <main className="save-movies">
+            <main className="save-movies">
 
-            <SearchForm checkboxSwitch={props.checkboxSwitch} handleСhangeCheckbox={props.handleСhangeCheckbox}/>
-            <MoviesCardList />
+                <SearchForm checkboxSwitch={props.checkboxSwitch} handleСhangeCheckbox={props.handleСhangeCheckbox} />
+                <MoviesCardList />
 
-        </main>
+            </main>
 
-        <Footer />
+            <Footer />
 
         </>
 

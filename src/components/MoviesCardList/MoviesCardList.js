@@ -102,8 +102,7 @@ function MoviesCardList() {
                     name={movie.nameRU}
                     duration={movie.duration}
 
-                />
-                         
+                />                        
 
             ))}                 
 

@@ -45,7 +45,6 @@
   padding-bottom: 10px;
   border: 0;
   width: 100%;
-
   box-sizing: border-box;
   border-bottom: 1px solid #424242;
   background-color: transparent;
@@ -56,6 +55,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.user-data__item:focus {
+  border-bottom: 1px solid #4285F4;  
 }
 
 .user-data__err-message {
@@ -114,7 +117,7 @@
   color: #4285f4;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .user-data {
     width: 260px;
     margin-top: 40px;

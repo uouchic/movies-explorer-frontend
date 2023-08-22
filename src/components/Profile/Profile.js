@@ -28,7 +28,7 @@ function Profile(props) {
                         />
                     </div>
 
-                    <div className="profile__wrap">
+                    <div className="profile__wrap profile__wrap_border_none">
 
                         <p className="profile__title">E-mail</p>
                         

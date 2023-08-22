@@ -5,7 +5,7 @@ function FilterCheckbox(props) {
     return (
 
 
-        <div className="checkbox__item">
+        <div className="checkbox">
 
             <div className="checkbox__wrap">
 

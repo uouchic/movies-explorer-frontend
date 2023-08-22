@@ -4,25 +4,38 @@
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
-  /* background-color: #073042; */
   display: flex;
   align-items: center;
 }
 
-.header__column {
+.header_location_main {
+  background-color: #073042;
+}
+
+.header-column {
   margin-left: 70px;
   flex: 1;
   display: flex;
 }
 
-.header__logo {
+.header-link__logo {
   width: 38px;
   height: 38px;
 }
 
-.header__link {
+.header-link {
   display: block;
   line-height: 0;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__wrap:hover {
+  opacity: 0.7;
 }
 
 .header__reg {
@@ -32,11 +45,13 @@
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 138.462% */
-
+  line-height: 18px;
   text-decoration: none;
-
   margin-right: 30px;
+}
+
+.header__reg:hover {
+  opacity: 0.7;
 }
 
 .header__log {
@@ -53,6 +68,10 @@
   font-weight: 500;
   line-height: 16px;
   cursor: pointer;
+}
+
+.header__log:hover {
+  opacity: 0.8;
 }
 
 .header__prof {
@@ -72,34 +91,44 @@
   height: 26px;
   border-radius: 50%;
   background-color: #313131;
-  background-image: url(../../images/icon__COLOR_icon-main.png);
+  background-image: url(../../images/icon__COLOR_icon-main.svg);
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 70px;
+}
+
+.header__avatar_location_main {
+  background-color: #0f4157;
 }
 
 .header__burger {
   width: 44px;
   height: 44px;
   display: none;
-  background-image: url(../../images/icon__COLOR_icon-burger.png);
+  background-image: url(../../images/icon__COLOR_icon-burger.svg);
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1152px) {
+  .header {
+    max-width: 990px;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .header {
     max-width: 768px;
   }
 
-  .header__column {
+  .header-column {
     margin-left: 30px;
   }
 
   .header__log {
     margin-right: 30px;
   }
+
   .header__burger {
     margin-right: 30px;
     background-color: inherit;
@@ -117,12 +146,12 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .header {
     max-width: 320px;
   }
 
-  .header__column {
+  .header-column {
     margin-left: 14px;
   }
 
@@ -144,7 +173,10 @@
     margin-right: 14px;
     width: 40px;
     height: 43px;
-    background-image: url(../../images/icon__COLOR_icon-main-320.png);
-  
+    background-image: url(../../images/icon__COLOR_icon-main-320.svg);
+  }
+
+  .header-link {
+    text-align: center;
   }
 }

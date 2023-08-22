@@ -13,7 +13,7 @@ function AboutMe() {
 
                 <div className="two-columns__me-text">
 
-                    <h3 className="section-subtitle section-subtitle_location_me">Виталий</h3>
+                    <h3 className="two-columns__subtitle">Виталий</h3>
 
                     <h4 className="two-columns__me-title">Фронтенд-разработчик, 30 лет</h4>
 

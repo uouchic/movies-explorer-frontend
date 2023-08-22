@@ -1,6 +1,6 @@
 import './Promo.css';
 
-import promoLogo from "../../images/text__COLOR_landing-logo.png";
+import promoLogo from "../../images/text__COLOR_landing-logo.svg";
 
 function Promo() {
   return (
@@ -10,7 +10,7 @@ function Promo() {
 
       <div className="promo__illustration">
 
-        <img className="promo__img" src={promoLogo} alt="Логотип" />
+        <img className="promo__img" src={promoLogo} alt="Спираль" />
 
 
       </div>

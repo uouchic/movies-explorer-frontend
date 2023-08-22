@@ -28,8 +28,8 @@
   border-bottom: 1px solid #424242;
 }
 
-.profile__wrap:last-child {
-  border-bottom: 1px solid #ee3465;
+.profile__wrap_border_none {
+  border: 0;
 }
 
 .profile__title {
@@ -89,10 +89,9 @@
   color: #ee3465;
   margin-top: 16px;
   font-weight: 500;
-
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 960px) {
   .profile__heading {
     margin-bottom: 81px;
   }
@@ -102,7 +101,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .profile-data {
     width: 260px;
   }
@@ -115,13 +114,7 @@
     margin-top: 361px;
   }
 
-
   .profile-actions__edit {
-    
     font-size: 12px;
-
   }
-
-
-
 }

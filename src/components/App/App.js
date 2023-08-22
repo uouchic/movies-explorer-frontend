@@ -23,11 +23,8 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(true);
 
-
   const [navleaving, setNavleaving] = useState(false);
-
   
-
   function handleOpenNavleaving() {
     setNavleaving(true);
   }
@@ -42,7 +39,9 @@ function App() {
   function handleСhangeCheckbox() {
     setCheckboxSwitch(!checkboxSwitch);
   }
-  
+
+  const [bacgroundHeader, setBacgroundHeader] = useState(true);
+
 
   return (
 
@@ -51,9 +50,9 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Main loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} />} />
+        <Route path="/" element={<Main loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} bacgroundHeader={bacgroundHeader} />} />
 
-        <Route path="/movies" element={<Movies loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} checkboxSwitch={checkboxSwitch} handleСhangeCheckbox={handleСhangeCheckbox}/>} />
+        <Route path="/movies" element={<Movies loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} checkboxSwitch={checkboxSwitch} handleСhangeCheckbox={handleСhangeCheckbox} />} />
 
         <Route path="/saved-movies" element={<SavedMovies loggedIn={loggedIn} handleOpenNavleaving={handleOpenNavleaving} checkboxSwitch={checkboxSwitch} handleСhangeCheckbox={handleСhangeCheckbox} />} />
 

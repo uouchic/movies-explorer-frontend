@@ -12,18 +12,17 @@ import Footer from "../Footer/Footer";
 
 function Main(props) {
 
-
     return (
         <>
 
             <Header
                 loggedIn={props.loggedIn}
                 handleOpenNavleaving={props.handleOpenNavleaving}
+                bacgroundHeader={props.bacgroundHeader}
+
             />
 
             <main className="content">
-
-
 
                 <Promo />
 

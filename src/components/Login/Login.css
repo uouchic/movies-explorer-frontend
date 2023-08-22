@@ -2,7 +2,7 @@
     margin-top: 197px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
     .user-data__save_location_reg {
         margin-top: 285px;
     }

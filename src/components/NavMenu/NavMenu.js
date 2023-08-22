@@ -19,8 +19,13 @@ function NavMenu(props) {
 
             <div className="nav-menu__row">
 
-                <Link to="/profile" className="nav-menu__prof" onClick={props.handleCloseNavleaving}>Аккаунд</Link>
-                <div className="nav-menu__avatar"></div>
+                <Link to="profile" className="nav-menu__link-prof">
+
+                    <div className="nav-menu__prof" onClick={props.handleCloseNavleaving}>Аккаунд</div>
+                    <div className="nav-menu__avatar"></div>
+                </Link>
+
+
 
             </div>
 

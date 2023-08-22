@@ -1,18 +1,23 @@
 .save-movies {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1280px;
+  padding-left: 70px;
+  padding-right: 70px;
   flex: 1;
   text-align: center;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 960px) {
   .save-movies {
-    max-width: 714px;
+    max-width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 540px) {
   .save-movies {
-    max-width: 300px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

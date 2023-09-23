@@ -6,12 +6,7 @@
   grid-template-columns: repeat(4, 1fr);
   row-gap: 38px;
   column-gap: 20px;
-}
-
-@media screen and (max-width: 1152px) {
-  .movies-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 960px) {

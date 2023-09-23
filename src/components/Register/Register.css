@@ -5,6 +5,7 @@
 
 .user-data {
   margin: 0 auto;
+  margin-top: 70px;
   width: 396px;
   display: flex;
   flex-direction: column;

@@ -85,6 +85,10 @@
   cursor: pointer;
 }
 
+.profile-actions__edit:disabled {
+  opacity: 0.8;
+}
+
 .profile-actions__edit_text_color {
   color: #ee3465;
   margin-top: 16px;

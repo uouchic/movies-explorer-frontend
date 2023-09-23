@@ -1,13 +1,15 @@
 .movies {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1140px;
   padding-left: 70px;
   padding-right: 70px;
-  flex: 1;
   text-align: center;
+  /* flex: 1;
+  text-align: center; */
 }
 
 .movies__btn {
+  margin: 0 auto;
   padding: 0;
   margin-bottom: 101px;
   border: none;
@@ -29,11 +31,33 @@
   opacity: 0.8;
 }
 
+.movies__btn_show_none {
+  display: none;
+}
+
+.movies__massenge {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 250px;
+  margin-bottom: 250px;
+}
+
 @media screen and (max-width: 960px) {
   .movies {
     max-width: 768px;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .movies__massenge {
+    font-size: 18px;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
 
@@ -46,5 +70,10 @@
   .movies__btn {
     width: 240px;
     height: 36px;
+  }
+  .movies__massenge {
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }

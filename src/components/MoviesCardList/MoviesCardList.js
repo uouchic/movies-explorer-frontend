@@ -2,114 +2,133 @@ import './MoviesCardList.css';
 
 import MoviesCard from "../MoviesCard/MoviesCard";
 
+import * as React from "react";
 
-const initialMovies = [
-    {
-        link: "https://images.unsplash.com/photo-1572988276585-71035689a285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Оно 2",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Чаки",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1518331539918-7a2dbf839306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-        duration: "1ч 45м",
-        nameRU: "Звездные войнын",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1589824769965-d2bdab6dfe57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Вермонт",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1599576270381-dfdb213dee2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Видеофильм",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1572988276585-71035689a285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Оно 2",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Чаки",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1518331539918-7a2dbf839306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-        duration: "1ч 45м",
-        nameRU: "Звездные войнын",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1589824769965-d2bdab6dfe57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Вермонт",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1599576270381-dfdb213dee2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Видеофильм",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Чаки",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1635100431192-180372735b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Приведение",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1589824769965-d2bdab6dfe57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Вермонт",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1599576270381-dfdb213dee2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Видеофильм",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Чаки",
-    },
-    {
-        link: "https://images.unsplash.com/photo-1635100431192-180372735b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        duration: "1ч 45м",
-        nameRU: "Приведение",
-    },
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 
-]
+const LG_INITIAL_CARD_COUNT = 16;
+const MD_INITIAL_CARD_COUNT = 8;
+const SM_INITIAL_CARD_COUNT = 5;
 
 
-function MoviesCardList() {
+const LG_ROW_CARD_COUNT = 4;
+const MD_ROW_CARD_COUNT = 2;
+const SM_ROW_CARD_COUNT = 1;
+
+
+
+
+function MoviesCardList(props) {
+
+
+    const isDesktop = useMediaQuery("(min-width: 960px)");
+    const isTablet = useMediaQuery("(min-width: 540px)");
+
+    const cardColumnCount = isDesktop
+        ? LG_ROW_CARD_COUNT
+        : isTablet
+            ? MD_ROW_CARD_COUNT
+            : SM_ROW_CARD_COUNT;
+
+    const initialCardCount = isDesktop
+        ? LG_INITIAL_CARD_COUNT
+        : isTablet
+            ? MD_INITIAL_CARD_COUNT
+            : SM_INITIAL_CARD_COUNT;
+
+    const [visibleCardCount, setVisibleCardCount] = React.useState(
+        initialCardCount
+    );
+
+
+
+
+    const roundedVisibleCardCount =
+        Math.floor(visibleCardCount / cardColumnCount) * cardColumnCount;
+
+
+
+    const handleClick = () => {
+        calculateCardCount();
+    };
+
+    const calculateCardCount = () => {
+        if (isDesktop) {
+            return setVisibleCardCount(visibleCardCount + LG_ROW_CARD_COUNT);
+        }
+
+        if (isTablet) {
+            return setVisibleCardCount(visibleCardCount + MD_ROW_CARD_COUNT);
+        }
+
+        setVisibleCardCount(visibleCardCount + SM_ROW_CARD_COUNT);
+    };
+
+
+
     return (
-
-        <section className="movies-list">
-
-
-            {initialMovies.map((movie) => (
-
-                <MoviesCard
-                    link={movie.link}
-                    name={movie.nameRU}
-                    duration={movie.duration}
-
-                />                        
-
-            ))}                 
+        <>
 
 
-        </section>
+            {props.boolean ?
 
-                  
+
+                <section className="movies-list">
+
+
+                    {props.filterMovies.slice(0, roundedVisibleCardCount).map((movie) => (
+
+                        <MoviesCard
+                            key={movie.id}
+                            trailerLink={movie.trailerLink}
+                            link={"https://api.nomoreparties.co/" + movie.image.url}
+                            name={movie.nameRU}
+                            duration={(Math.floor(movie.duration / 60)) + "ч" + " " + (movie.duration - Math.floor(movie.duration / 60) * 60) + "м"}
+                            saveMovie={props.saveMovie}
+                            saveMovies={props.saveMovies}
+                            movie={movie}
+                            boolean={props.boolean}
+                            delMovie={props.delMovie}
+                            deletesMovie={props.deletesMovie}
+
+                        />
+
+                    ))}
+
+
+
+
+                </section> :
+
+                <section className="movies-list">
+
+
+                    {props.filterMovies.slice(0, roundedVisibleCardCount).map((movie) => (
+
+                        <MoviesCard
+                            key={movie.id}
+                            link={movie.image}
+                            trailerLink={movie.trailerLink}
+                            name={movie.nameRU}
+                            duration={(Math.floor(movie.duration / 60)) + "ч" + " " + (movie.duration - Math.floor(movie.duration / 60) * 60) + "м"}
+                            movie={movie}
+                            boolean={props.boolean}
+                            delMovie={props.delMovie}
+                            saveMovies={props.saveMovies}
+                        />
+
+                    ))}
+
+
+
+
+                </section>}
+
+            <button className={roundedVisibleCardCount < props.filterMovies.length ? "movies__btn" : "movies__btn movies__btn_show_none"} type="button" onClick={handleClick}>Ещё</button>
+        </>
+
+
     );
 }
 

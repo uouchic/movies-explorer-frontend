@@ -53,26 +53,13 @@ function Movies(props) {
 
     function handleFilteredMviesApi(data) {
 
-       
-
-
-
         props.checkboxSwitch ?
             setFilterMovies((data.filter(
                 m => m.nameRU.includes(formValueMovies)).filter(m => m.duration < 40)
             )) :
             setFilterMovies(data.filter(
                 m => m.nameRU.includes(formValueMovies)
-            ));
-
-
-            //setTimeout (() => {setIsLoading(false)}, 1000)
-
-          
-
-
-
-
+            ));    
     }
 
 
@@ -85,83 +72,32 @@ function Movies(props) {
             setFilterMovies(allMovies.filter(
                 m => m.nameRU.includes(formValueMovies)
             ));
-
-
-
     }
-
-
-
-
-
-
 
     // фунуция фильтрования фильмов в зависимости от поисковой фразы и положения чекбокса короткометражек
     function handleSearchMovies(e) {
-
         e.preventDefault();
-
-
-
-
         if (isSubmit) {
-
-            handleFilteredMviesLocal()
-
+            handleFilteredMviesLocal();
         } else {
-            // props.handleAllMovies();
-
             setIsLoading(true);
-
-
-
             movies.getMovies()
                 .then((data) => {
                     //console.log(data);
                     setAllMovies(data);
-
                     setIsSubmit(true);
-
                     handleFilteredMviesApi(data);
-
-
-
-
-
                 })
-
                 .catch((err) => console.log(err))
                 .finally(() => {setTimeout (() => {setIsLoading(false)}, 2000)})
         }
-
-
-
     };
-
-
-
-
-
-
-
-
 
     useEffect(() => {
         handleFilteredMviesLocal();
     }, [props.checkboxSwitch]);
 
-
-
-
-
-
-
-
-
     useEffect(() => {
-        // 
-
-
         const filterMovies = (JSON.parse(localStorage.getItem("filterMovies")));
         if (filterMovies) {
             setFilterMovies(filterMovies)
@@ -186,10 +122,6 @@ function Movies(props) {
         if (submit) {
             setIsSubmit(submit)
         }
-
-
-
-
     }, []);
 
 
@@ -224,12 +156,9 @@ function Movies(props) {
     }, [isSubmit]);
 
 
-
-
     return (
 
         <>
-
             <Header
                 loggedIn={props.loggedIn}
                 handleOpenNavleaving={props.handleOpenNavleaving} />
@@ -238,17 +167,11 @@ function Movies(props) {
 
                 <SearchForm
                     checkboxSwitch={props.checkboxSwitch}
-                    handleСhangeCheckbox={props.handleСhangeCheckbox}
-                    //setFilterMovies={setFilterMovies}                    
+                    handleСhangeCheckbox={props.handleСhangeCheckbox}                  
                     formValueMovies={formValueMovies}
                     handleChangeMovies={handleChangeMovies}
                     handleSearchMovies={handleSearchMovies}
-                //handleAllMovies={props.handleAllMovies}
-                // allMovies={props.allMovies}
                 />
-
-
-
 
                 {(filterMovies == 0) ? <p className="movies__massenge">Ничего не найдено!</p> : ((isLoading) ?
 
@@ -265,15 +188,7 @@ function Movies(props) {
 
 
                     />)}
-
-
-
-
-
-
-
-
-
+                    
             </main>
 
             <Footer />

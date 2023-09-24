@@ -17,10 +17,6 @@ import { useState, useEffect } from "react";
 
 function SavedMovies(props) {
 
-
-
-
-
     
     // стейт отобранных фильмов
     const [filterMovies, setFilterMovies] = useState([]);
@@ -44,16 +40,11 @@ function SavedMovies(props) {
         // eslint-disable-next-line no-lone-blocks
 
         filteredSaveMovies();
-    
-
-
-
 
     };
 
 
     function filteredSaveMovies () {
-
         
             props.checkboxSwitch ?
             setFilterMovies((props.saveMovies.filter(
@@ -61,59 +52,25 @@ function SavedMovies(props) {
                 )) :
                 setFilterMovies(props.saveMovies.filter(
                     m => m.nameRU.includes(formValueMovies)
-                ))
-
-
-        
+                ))        
 
     }
-
-
-
 
     useEffect(() => {
         filteredSaveMovies();
     }, [props.checkboxSwitch]);
 
 
-
-
-
-
-
-
-
  // функция удаления фильма 
  function delMovie (id) {
     MainApi.removeMovie(id)
-    .then((data) => {
-        
+    .then((data) => {        
         setFilterMovies(() => filterMovies.filter((m) => m._id !== data._id));
         props.setSaveMovies(() => props.saveMovies.filter((m) => m._id !== data._id));
-
-        // setFilterMovies([data]);
-
-          
-
-        
-        
-        
-
     })
     .catch((err) => console.log(err));
-
     /* console.log("Нажали на крестик") */
  }
-
-
-
-
-
-
-
-
-
-
 
 
     return (

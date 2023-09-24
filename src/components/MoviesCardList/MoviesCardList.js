@@ -4,23 +4,19 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 import * as React from "react";
 
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useState, useEffect } from "react";
 
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const LG_INITIAL_CARD_COUNT = 16;
 const MD_INITIAL_CARD_COUNT = 8;
 const SM_INITIAL_CARD_COUNT = 5;
 
-
 const LG_ROW_CARD_COUNT = 4;
 const MD_ROW_CARD_COUNT = 2;
 const SM_ROW_CARD_COUNT = 1;
 
-
-
-
 function MoviesCardList(props) {
-
 
     const isDesktop = useMediaQuery("(min-width: 960px)");
     const isTablet = useMediaQuery("(min-width: 540px)");
@@ -37,17 +33,12 @@ function MoviesCardList(props) {
             ? MD_INITIAL_CARD_COUNT
             : SM_INITIAL_CARD_COUNT;
 
-    const [visibleCardCount, setVisibleCardCount] = React.useState(
+    const [visibleCardCount, setVisibleCardCount] = useState(
         initialCardCount
     );
 
-
-
-
     const roundedVisibleCardCount =
         Math.floor(visibleCardCount / cardColumnCount) * cardColumnCount;
-
-
 
     const handleClick = () => {
         calculateCardCount();
@@ -65,17 +56,11 @@ function MoviesCardList(props) {
         setVisibleCardCount(visibleCardCount + SM_ROW_CARD_COUNT);
     };
 
-
-
     return (
         <>
-
-
             {props.boolean ?
 
-
                 <section className="movies-list">
-
 
                     {props.filterMovies.slice(0, roundedVisibleCardCount).map((movie) => (
 
@@ -96,13 +81,9 @@ function MoviesCardList(props) {
 
                     ))}
 
-
-
-
                 </section> :
 
                 <section className="movies-list">
-
 
                     {props.filterMovies.slice(0, roundedVisibleCardCount).map((movie) => (
 
@@ -120,14 +101,10 @@ function MoviesCardList(props) {
 
                     ))}
 
-
-
-
                 </section>}
 
             <button className={roundedVisibleCardCount < props.filterMovies.length ? "movies__btn" : "movies__btn movies__btn_show_none"} type="button" onClick={handleClick}>Ещё</button>
         </>
-
 
     );
 }

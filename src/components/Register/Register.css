@@ -96,6 +96,10 @@
   opacity: 0.8;
 }
 
+.user-data__save:disabled {
+  background: gray;
+}
+
 .user-data__link {
   display: block;
   margin-top: 16px;

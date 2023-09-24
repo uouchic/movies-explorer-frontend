@@ -4,15 +4,10 @@ import { useState, useEffect } from "react";
 
 import * as MainApi from "../../utils/MainApi";
 
-
-
-
 function MoviesCard(props) {
 
 
-    const [isllike, setIsllike] = useState(false);
-
-    
+    const [isllike, setIsllike] = useState(false);    
     
     const [idSaveMovie, setIdSaveMovie] = useState("");
 
@@ -20,11 +15,10 @@ function MoviesCard(props) {
         props.delMovie(props.movie._id);
 
     }
-
        
     const isOwner = props.saveMovies.some((i) => i.movieId === props.movie.id);
 
-    console.log(isOwner);
+    //console.log(isOwner);
 
       function handleLikeClick() {
         // setIsllike(!isllike);
@@ -32,24 +26,16 @@ function MoviesCard(props) {
             props.saveMovie(props.movie);
             setIsllike(!isllike)
             // console.log(props.movie);
-            // console.log(idSaveMovie)
+            
 
         } else {
-
-            // console.log(idSaveMovie);
-               
+            // console.log(idSaveMovie);               
             props.deletesMovie(props.movie.id) 
-            // props.delMovie(idSaveMovie);   
+               
 
         }
         
     }
-
-
- 
-
-
-
 
     return (
 
@@ -88,8 +74,6 @@ function MoviesCard(props) {
                         className={"movies-card__like movies-card__like_state_dell"}
                         type="button"
                         onClick={deleteMovies}
-                    //   saveMovie={props.saveMovie}
-
                     ></button>
 
                 </div>

@@ -29,16 +29,10 @@ import * as MainApi from "../../utils/MainApi";
 
 function App() {
 
-  // const [isLoading, setIsLoading] = useState(false);
-
-
-
-  // --------------------------------------------------------ДАННЫЕ ПОЛЬЗОВАТЕЛЯ---------------------------------------------------------- //
+    // --------------------------------------------------------ДАННЫЕ ПОЛЬЗОВАТЕЛЯ---------------------------------------------------------- //
 
   // стейт с объектом данных пользователя
   const [currentUser, setCurrentUser] = useState({});
-
-
 
   // -----------------------------------------------стейт залогинился пользователь или нет---------------------------------------------------//
 
@@ -54,15 +48,9 @@ function App() {
         })
         .catch((err) => console.log(err));
 
-      console.log(currentUser)
+      //console.log(currentUser)
     }
   }, [loggedIn]);
-
-
-
-
-
-
 
   // ---------------------------------------------------------------логирование пользователя---------------------------------------------------//
 
@@ -78,7 +66,6 @@ function App() {
   const handleSignOut = () => {
     setLoggedIn(false);
   };
-
 
   // данные текущего пользователя
 
@@ -158,15 +145,7 @@ function App() {
   }, []);
 
 
-
-
-
-
-
-
   //  ------------------------------------------------------------------------- СТЕЙТЫ ПОПАПОВ---------------------------------------------------------------------//
-
-
 
   const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
 
@@ -185,55 +164,16 @@ function App() {
     setIsSuccessTooltipStatus(bool);
   }
 
-
-
-
-
-  // -----------------------------------------------------------------------------ВСЕ ФИЛЬМЫ ИЗ АПИ---------------------------------------------------------//
-
-
-  // -------------------------------------------------------------стейт хранения всех фильмов полученых из API----------------------------------------------//
-  // const [allMovies, setAllMovies] = useState([]);
-
-
-  // эфект делающий запрос к API при загрухки страницы и созраняющий все фильмы в стейт
-
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   movies.getMovies()
-  //     .then((data) => {
-  //       console.log(data);
-  //       setAllMovies(data);
-  //     })
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setIsLoading(false))
-  // }, []);
-
-
-  function handleAllMovies () {
-    // setIsLoading(true);
-    // movies.getMovies()
-    //   .then((data) => {
-    //     console.log(data);
-    //     setAllMovies(data);
-    //   })
-    //   .catch((err) => console.log(err))
-    //   .finally(() => setIsLoading(false))
-  };
-
-
   // ----------------------------------------------------------------------- СОХРАНЕННЫЕ ФИЛЬМЫ ИЗ АПИ----------------------------------------------------//
 
 
   const [saveMovies, setSaveMovies] = useState([]);
 
-  console.log(saveMovies)
+  //console.log(saveMovies)
 
 
 
   // ------------------------------------------------------------------------Получить все сохраненные фильмы -----------------------------------------------//
-
-
 
   useEffect(() => {
     if (loggedIn) {
@@ -247,11 +187,6 @@ function App() {
         
     }
   }, [loggedIn]);
-
-
-  // ------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
   // --------------------------------------------------------------Функция сохранения фильма --------------------------------------------------
 
@@ -271,65 +206,25 @@ function App() {
     })
       .then((data) => {
        // saveMovies.push(data);
-
         setSaveMovies([data, ...saveMovies]);
-
-        //setSaveMovies((saveMovies) => saveMovies.map((c) => c._id === card._id ? data : c));
-
-
-        
-
-
-
+        //setSaveMovies((saveMovies) => saveMovies.map((c) => c._id === card._id ? data : c));    
       })
       .catch((err) => { console.log(err) })
-
-
   };
 
 
-
-
-
-  // -------------------------------------------------------------------функции удаления фильма --------------------------------
-  function delMovie(id) {
-
-    // MainApi.removeMovie(id)
-    //   .then((data) => { })
-    //   .catch((err) => console.log(err));
-
-    /* console.log("Нажали на сердечко") */
-  }
-
-
-  // const [idMovieDelete, setIdMovieDelete] = useState("")
-
-
   function deletesMovie(idMovieDelete) {
-
-    console.log(idMovieDelete);
-
+    //console.log(idMovieDelete);
     const idDelete = saveMovies.filter((m) => m.movieId === idMovieDelete);
-
-    console.log(idDelete[0]._id);
-
+    //console.log(idDelete[0]._id);
     MainApi.removeMovie(idDelete[0]._id)
       .then((data) => {
         setSaveMovies(() => saveMovies.filter((m) => m._id !== data._id));
       })
       .catch((err) => console.log(err));
-
-
-
-
   }
-
-
-
-
-
-
   
+
   function handleUpdateUser(userInfo) {
     MainApi
       .setUserInfo(userInfo)
@@ -339,18 +234,6 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
 
@@ -375,24 +258,19 @@ function App() {
           <Route
             path="/movies"
             element={
-              <Movies
+              
+              <ProtectedRouteElement
+                element={Movies}
                 loggedIn={loggedIn}
                 handleOpenNavleaving={handleOpenNavleaving}
                 checkboxSwitch={checkboxSwitch}
                 handleСhangeCheckbox={handleСhangeCheckbox}
                 handleLogin={handleLogin}
                 saveMovie={saveMovie}
-                //allMovies={allMovies}
-
-                saveMovies={saveMovies}
-                //delMovie={delMovie}
-                deletesMovie={deletesMovie}
-                //isLoading={isLoading}
-                handleAllMovies={handleAllMovies}
+                saveMovies={saveMovies}                
+                deletesMovie={deletesMovie}                
                 setCheckboxSwitch={setCheckboxSwitch}
-
               />
-
             }
           />
 
@@ -401,20 +279,14 @@ function App() {
             element={
               <ProtectedRouteElement
                 element={SavedMovies}
-
                 loggedIn={loggedIn}
                 handleOpenNavleaving={handleOpenNavleaving}
                 checkboxSwitch={checkboxSwitch}
                 handleСhangeCheckbox={handleСhangeCheckbox}
                 saveMovie={saveMovie}
                 setSaveMovies={setSaveMovies}
-
-                //delMovie={delMovie}
-                //allMovies={allMovies}
                 saveMovies={saveMovies}
                 deletesMovie={deletesMovie}
-
-
               />
             }
           />
@@ -451,10 +323,6 @@ function App() {
       />
 
     </CurrentUserContext.Provider>
-
-
-
-
   );
 }
 

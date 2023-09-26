@@ -1,0 +1,116 @@
+.search-wrap {
+  padding-bottom: 69px;
+  padding-top: 71px;
+  border-bottom: 1px solid #424242;
+  display: flex;
+}
+
+.search-form {
+  max-width: 1280px;
+  height: 72px;
+  border-radius: 9px 0 0 9px;
+  background: #2f2f2f;
+  display: flex;
+  flex: 1;
+}
+
+.search-form__logo {
+  width: 34px;
+  height: 34px;
+  margin: 19px 0 19px 19px;
+  background-image: url(../../images/icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-form__movies {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #424242;
+  padding-right: 32px;
+  margin-left: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.search-form__movies-name {
+  width: 100%;
+  height: 34px;
+  border: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  color: #8b8b8b;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+.search-form__movies-name:focus {
+  border-radius: 50px;
+  background-color: #343434;
+}
+
+
+.search-form__find {
+  border-radius: 48px;
+  background: #4285f4;
+  border: none;
+  padding: 8px 11px;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.search-form__find:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 960px) {
+  .search-wrap {
+    padding-bottom: 108px;
+    padding-top: 78px;
+  }
+
+  .search-form__movies {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .search-wrap {
+    padding-top: 80px;
+    padding-bottom: 38px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form {
+    border-radius: 9px;
+  }
+
+  .search-form__movies {
+    border-right: none;
+    width: 273px;
+  }
+
+  .search-form__movies-name {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .search-form__logo {
+    display: none;
+  }
+}

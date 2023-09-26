@@ -21,6 +21,13 @@ function SavedMovies(props) {
     // стейт отобранных фильмов
     const [filterMovies, setFilterMovies] = useState([]);
 
+    const [checkboxSwitch, setCheckboxSwitch] = useState(false);
+
+    function handleСhangeCheckbox() {
+        setCheckboxSwitch(!checkboxSwitch);
+    
+      }
+
 
     // стейт значения из формы поиска
     const [formValueMovies, setFormValueMovies] = useState("");
@@ -46,19 +53,19 @@ function SavedMovies(props) {
 
     function filteredSaveMovies () {
         
-            props.checkboxSwitch ?
+            checkboxSwitch ?
             setFilterMovies((props.saveMovies.filter(
-                    m => m.nameRU.includes(formValueMovies)).filter(m => m.duration < 40)
+                    m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())).filter(m => m.duration < 40)
                 )) :
                 setFilterMovies(props.saveMovies.filter(
-                    m => m.nameRU.includes(formValueMovies)
+                    m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())
                 ))        
 
     }
 
     useEffect(() => {
         filteredSaveMovies();
-    }, [props.checkboxSwitch]);
+    }, [checkboxSwitch]);
 
 
  // функция удаления фильма 
@@ -84,8 +91,8 @@ function SavedMovies(props) {
             <main className="save-movies">
 
                 <SearchForm
-                    checkboxSwitch={props.checkboxSwitch}
-                    handleСhangeCheckbox={props.handleСhangeCheckbox}
+                    checkboxSwitch={checkboxSwitch}
+                    handleСhangeCheckbox={handleСhangeCheckbox}
                     setFilterMovies={setFilterMovies}
                     formValueMovies={formValueMovies}
                     handleChangeMovies={handleChangeMovies}

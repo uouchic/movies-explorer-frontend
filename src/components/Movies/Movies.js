@@ -55,10 +55,10 @@ function Movies(props) {
 
         props.checkboxSwitch ?
             setFilterMovies((data.filter(
-                m => m.nameRU.includes(formValueMovies)).filter(m => m.duration < 40)
+                m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())).filter(m => m.duration < 40)
             )) :
             setFilterMovies(data.filter(
-                m => m.nameRU.includes(formValueMovies)
+                m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())
             ));    
     }
 
@@ -67,12 +67,14 @@ function Movies(props) {
 
         props.checkboxSwitch ?
             setFilterMovies((allMovies.filter(
-                m => m.nameRU.includes(formValueMovies)).filter(m => m.duration < 40)
+                m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())).filter(m => m.duration < 40)
             )) :
             setFilterMovies(allMovies.filter(
-                m => m.nameRU.includes(formValueMovies)
+                m => m.nameRU.toLowerCase().includes(formValueMovies.toLowerCase())
             ));
     }
+    
+    
 
     // фунуция фильтрования фильмов в зависимости от поисковой фразы и положения чекбокса короткометражек
     function handleSearchMovies(e) {
@@ -173,7 +175,7 @@ function Movies(props) {
                     handleSearchMovies={handleSearchMovies}
                 />
 
-                {(filterMovies == 0) ? <p className="movies__massenge">Ничего не найдено!</p> : ((isLoading) ?
+                {(filterMovies == 0 && isSubmit) ? <p className="movies__massenge">Ничего не найдено!</p> : ((isLoading) ?
 
                     <Preloader /> :
 

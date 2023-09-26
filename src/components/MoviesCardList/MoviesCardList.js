@@ -14,12 +14,15 @@ const SM_INITIAL_CARD_COUNT = 5;
 
 const LG_ROW_CARD_COUNT = 4;
 const MD_ROW_CARD_COUNT = 2;
-const SM_ROW_CARD_COUNT = 1;
+const SM_ROW_CARD_COUNT = 2;
 
 function MoviesCardList(props) {
 
     const isDesktop = useMediaQuery("(min-width: 960px)");
     const isTablet = useMediaQuery("(min-width: 540px)");
+
+
+    // -----------------------Кол-во добавляемых карточек -----------------------
 
     const cardColumnCount = isDesktop
         ? LG_ROW_CARD_COUNT
@@ -27,18 +30,29 @@ function MoviesCardList(props) {
             ? MD_ROW_CARD_COUNT
             : SM_ROW_CARD_COUNT;
 
+
+            // ------------------------- Начальное количество карточек -------------------------
+
     const initialCardCount = isDesktop
         ? LG_INITIAL_CARD_COUNT
         : isTablet
             ? MD_INITIAL_CARD_COUNT
             : SM_INITIAL_CARD_COUNT;
 
+            // ----------------------- стейт начального кол-ва карточек ---------------------
+
     const [visibleCardCount, setVisibleCardCount] = useState(
         initialCardCount
     );
 
+
+    useEffect(() => {
+        setVisibleCardCount(initialCardCount)
+      }, [props.filterMovies]);
+
+            // ----------------------------------вычисляем кол-во первоначального отображения карточек -------------------
     const roundedVisibleCardCount =
-        Math.floor(visibleCardCount / cardColumnCount) * cardColumnCount;
+        (visibleCardCount / cardColumnCount) * cardColumnCount;
 
     const handleClick = () => {
         calculateCardCount();
@@ -85,7 +99,7 @@ function MoviesCardList(props) {
 
                 <section className="movies-list">
 
-                    {props.filterMovies.slice(0, roundedVisibleCardCount).map((movie) => (
+                    {props.filterMovies.map((movie) => (
 
                         <MoviesCard
                             key={movie.id}
@@ -103,7 +117,10 @@ function MoviesCardList(props) {
 
                 </section>}
 
+                {props.boolean ?
+
             <button className={roundedVisibleCardCount < props.filterMovies.length ? "movies__btn" : "movies__btn movies__btn_show_none"} type="button" onClick={handleClick}>Ещё</button>
+            : <div></div>}
         </>
 
     );

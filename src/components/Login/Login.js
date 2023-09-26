@@ -18,12 +18,6 @@ function Login(props) {
     const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (currentUser) {
-            resetForm(currentUser, {}, true);
-        }
-    }, [currentUser, resetForm]);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         MainApi
@@ -57,6 +51,7 @@ function Login(props) {
                         id="email"
                         name="email"
                         type="email"
+                        pattern="^\S+@\S+\.\S+$"
                         className="user-data__item"
                         value={values.email}
                         onChange={handleChange}

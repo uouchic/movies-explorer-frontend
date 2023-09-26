@@ -18,12 +18,6 @@ function Register(props) {
 
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
-  useEffect(() => {
-    if (currentUser) {
-      resetForm(currentUser, {}, true);
-    }
-  }, [currentUser, resetForm])
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -85,6 +79,7 @@ function Register(props) {
             id="email"
             name="email"
             type="email"
+            pattern="^\S+@\S+\.\S+$"
             className="user-data__item"
 
             value={values.email}

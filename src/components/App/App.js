@@ -281,8 +281,8 @@ function App() {
                 element={SavedMovies}
                 loggedIn={loggedIn}
                 handleOpenNavleaving={handleOpenNavleaving}
-                checkboxSwitch={checkboxSwitch}
-                handleСhangeCheckbox={handleСhangeCheckbox}
+                //checkboxSwitch={checkboxSwitch}
+                //handleСhangeCheckbox={handleСhangeCheckbox}
                 saveMovie={saveMovie}
                 setSaveMovies={setSaveMovies}
                 saveMovies={saveMovies}
@@ -298,6 +298,7 @@ function App() {
               handleOpenNavleaving={handleOpenNavleaving}
               handleSignOut={handleSignOut}
               onUpdateUser={handleUpdateUser}
+              setTooltipStatus={setTooltipStatus} openInfoTooltip={openInfoTooltip}
             />
           }
           />

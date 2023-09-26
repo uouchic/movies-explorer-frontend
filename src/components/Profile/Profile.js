@@ -65,6 +65,8 @@ function Profile(props) {
       name,
       email: description,
     });
+    props.openInfoTooltip();
+    props.setTooltipStatus(true);
     console.log({
       name,
       email: description,

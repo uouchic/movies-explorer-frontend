@@ -1,0 +1,182 @@
+.header {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.header_location_main {
+  background-color: #073042;
+}
+
+.header-column {
+  margin-left: 70px;
+  flex: 1;
+  display: flex;
+}
+
+.header-link__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.header-link {
+  display: block;
+  line-height: 0;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__wrap:hover {
+  opacity: 0.7;
+}
+
+.header__reg {
+  color: #fff;
+  text-align: right;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.header__reg:hover {
+  opacity: 0.7;
+}
+
+.header__log {
+  margin-right: 70px;
+  width: 76px;
+  height: 32px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+  border: none;
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.header__log:hover {
+  opacity: 0.8;
+}
+
+.header__prof {
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  text-decoration: none;
+  margin-right: 7px;
+}
+
+.header__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #313131;
+  background-image: url(../../images/icon__COLOR_icon-main.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 70px;
+}
+
+.header__avatar_location_main {
+  background-color: #0f4157;
+}
+
+.header__burger {
+  width: 44px;
+  height: 44px;
+  display: none;
+  background-image: url(../../images/icon__COLOR_icon-burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1152px) {
+  .header {
+    max-width: 990px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    max-width: 768px;
+  }
+
+  .header-column {
+    margin-left: 30px;
+  }
+
+  .header__log {
+    margin-right: 30px;
+  }
+
+  .header__burger {
+    margin-right: 30px;
+    background-color: inherit;
+    border: 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  .header__avatar {
+    display: none;
+  }
+
+  .header__prof {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    max-width: 320px;
+  }
+
+  .header-column {
+    margin-left: 14px;
+  }
+
+  .header__reg {
+    font-size: 10px;
+    line-height: 16px;
+
+    margin-right: 14px;
+  }
+
+  .header__log {
+    margin-right: 14px;
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .header__burger {
+    margin-right: 14px;
+    width: 40px;
+    height: 43px;
+    background-image: url(../../images/icon__COLOR_icon-main-320.svg);
+  }
+
+  .header-link {
+    text-align: center;
+  }
+}

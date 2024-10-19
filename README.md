@@ -1,9 +1,12 @@
 # movies-explorer
-Репозиторий для приложения проекта movie, включающий верстку
+
+Пул реквест: https://github.com/uouchic/movies-explorer-frontend/pull/2
+
+Задеплоидный проект на сервер: https://vche-movie.nomoreparties.co
 
 
 
-Адрес репозитория: https://github.com/uouchic/movies-explorer-frontend
 
-Макет:  dark-1
+
+
 

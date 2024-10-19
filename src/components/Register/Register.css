@@ -5,6 +5,7 @@
 
 .user-data {
   margin: 0 auto;
+  margin-top: 70px;
   width: 396px;
   display: flex;
   flex-direction: column;
@@ -93,6 +94,10 @@
 
 .user-data__save:hover {
   opacity: 0.8;
+}
+
+.user-data__save:disabled {
+  background: gray;
 }
 
 .user-data__link {
